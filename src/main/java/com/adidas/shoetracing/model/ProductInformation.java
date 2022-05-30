@@ -18,7 +18,7 @@ import javax.annotation.Generated;
  * ProductInformation
  */
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-05-30T20:27:50.808358+02:00[Europe/Berlin]")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-05-30T20:41:57.581598+02:00[Europe/Berlin]")
 public class ProductInformation   {
 
   @JsonProperty("id")
@@ -33,8 +33,14 @@ public class ProductInformation   {
   @JsonProperty("description")
   private String description;
 
+  @JsonProperty("imageUrl")
+  private String imageUrl;
+
   @JsonProperty("owner")
   private String owner;
+
+  @JsonProperty("ownerAdress")
+  private String ownerAdress;
 
   public ProductInformation id(String id) {
     this.id = id;
@@ -112,6 +118,25 @@ public class ProductInformation   {
     this.description = description;
   }
 
+  public ProductInformation imageUrl(String imageUrl) {
+    this.imageUrl = imageUrl;
+    return this;
+  }
+
+  /**
+   * Get imageUrl
+   * @return imageUrl
+  */
+  
+  @Schema(name = "imageUrl", required = false)
+  public String getImageUrl() {
+    return imageUrl;
+  }
+
+  public void setImageUrl(String imageUrl) {
+    this.imageUrl = imageUrl;
+  }
+
   public ProductInformation owner(String owner) {
     this.owner = owner;
     return this;
@@ -131,6 +156,25 @@ public class ProductInformation   {
     this.owner = owner;
   }
 
+  public ProductInformation ownerAdress(String ownerAdress) {
+    this.ownerAdress = ownerAdress;
+    return this;
+  }
+
+  /**
+   * Get ownerAdress
+   * @return ownerAdress
+  */
+  
+  @Schema(name = "ownerAdress", required = false)
+  public String getOwnerAdress() {
+    return ownerAdress;
+  }
+
+  public void setOwnerAdress(String ownerAdress) {
+    this.ownerAdress = ownerAdress;
+  }
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -144,12 +188,14 @@ public class ProductInformation   {
         Objects.equals(this.name, productInformation.name) &&
         Objects.equals(this.price, productInformation.price) &&
         Objects.equals(this.description, productInformation.description) &&
-        Objects.equals(this.owner, productInformation.owner);
+        Objects.equals(this.imageUrl, productInformation.imageUrl) &&
+        Objects.equals(this.owner, productInformation.owner) &&
+        Objects.equals(this.ownerAdress, productInformation.ownerAdress);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name, price, description, owner);
+    return Objects.hash(id, name, price, description, imageUrl, owner, ownerAdress);
   }
 
   @Override
@@ -160,7 +206,9 @@ public class ProductInformation   {
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    price: ").append(toIndentedString(price)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
+    sb.append("    imageUrl: ").append(toIndentedString(imageUrl)).append("\n");
     sb.append("    owner: ").append(toIndentedString(owner)).append("\n");
+    sb.append("    ownerAdress: ").append(toIndentedString(ownerAdress)).append("\n");
     sb.append("}");
     return sb.toString();
   }

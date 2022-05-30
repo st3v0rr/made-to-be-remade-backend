@@ -26,7 +26,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.context.request.NativeWebRequest;
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-05-30T20:27:50.808358+02:00[Europe/Berlin]")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-05-30T20:41:57.581598+02:00[Europe/Berlin]")
 @Validated
 @Tag(name = "Product", description = "the Product API")
 public interface ProductApi {
@@ -61,7 +61,7 @@ public interface ProductApi {
         getRequest().ifPresent(request -> {
             for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
                 if (mediaType.isCompatibleWith(MediaType.valueOf("application/json"))) {
-                    String exampleString = "{ \"owner\" : \"owner\", \"price\" : \"price\", \"name\" : \"name\", \"description\" : \"description\", \"id\" : \"id\" }";
+                    String exampleString = "{ \"owner\" : \"owner\", \"price\" : \"price\", \"imageUrl\" : \"imageUrl\", \"name\" : \"name\", \"description\" : \"description\", \"ownerAdress\" : \"ownerAdress\", \"id\" : \"id\" }";
                     ApiUtil.setExampleResponse(request, "application/json", exampleString);
                     break;
                 }
@@ -97,7 +97,7 @@ public interface ProductApi {
         getRequest().ifPresent(request -> {
             for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
                 if (mediaType.isCompatibleWith(MediaType.valueOf("application/json"))) {
-                    String exampleString = "{ \"owner\" : \"owner\", \"price\" : \"price\", \"name\" : \"name\", \"description\" : \"description\", \"id\" : \"id\" }";
+                    String exampleString = "{ \"owner\" : \"owner\", \"price\" : \"price\", \"imageUrl\" : \"imageUrl\", \"name\" : \"name\", \"description\" : \"description\", \"ownerAdress\" : \"ownerAdress\", \"id\" : \"id\" }";
                     ApiUtil.setExampleResponse(request, "application/json", exampleString);
                     break;
                 }
@@ -132,7 +132,7 @@ public interface ProductApi {
         getRequest().ifPresent(request -> {
             for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
                 if (mediaType.isCompatibleWith(MediaType.valueOf("application/json"))) {
-                    String exampleString = "{ \"owner\" : \"owner\", \"price\" : \"price\", \"name\" : \"name\", \"description\" : \"description\", \"id\" : \"id\" }";
+                    String exampleString = "{ \"owner\" : \"owner\", \"price\" : \"price\", \"imageUrl\" : \"imageUrl\", \"name\" : \"name\", \"description\" : \"description\", \"ownerAdress\" : \"ownerAdress\", \"id\" : \"id\" }";
                     ApiUtil.setExampleResponse(request, "application/json", exampleString);
                     break;
                 }

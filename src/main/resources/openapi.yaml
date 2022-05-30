@@ -71,6 +71,8 @@ components:
           type: string
         description:
           type: string
+        imageUrl:
+          type: string
         owner:
           type: string
         ownerAdress:
