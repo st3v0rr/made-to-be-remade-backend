@@ -17,16 +17,17 @@ public class ProductController implements ProductApi{
 
   @Override
   public ResponseEntity<List<ProductInformation>> getProducts() {
-    return ProductApi.super.getProducts();
+    return ResponseEntity.ok(ProductMock.getMockProducts());
   }
 
   @Override
   public ResponseEntity<ProductInformation> getProduct(String id) {
-    return ProductApi.super.getProduct(id);
+    return ResponseEntity.ok(productService.getProduct(id));
   }
 
   @Override
   public ResponseEntity<ProductInformation> buyProduct(ProductInformation productInformation) {
+
     return ProductApi.super.buyProduct(productInformation);
   }
 }
