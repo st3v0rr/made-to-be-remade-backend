@@ -1,6 +1,5 @@
-package com.adidas.shoetracing;
+package com.adidas.shoetracing.api;
 
-import com.adidas.shoetracing.api.ShoeInformationApi;
 import com.adidas.shoetracing.blockchain.model.MadeToBeRemade;
 import com.adidas.shoetracing.model.ShoeInformation;
 import org.springframework.http.ResponseEntity;

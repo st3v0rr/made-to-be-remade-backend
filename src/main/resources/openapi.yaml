@@ -4,38 +4,74 @@ info:
   description: Retrieving shoe information from the blockchain
   version: 1.0.0
 tags:
-  - name: 'Shoe Information'
+  - name: 'Product Information'
 paths:
-  '/shoes/{id}':
+  '/products/{id}':
     get:
-      description: Retrieve message
-      operationId: retrieveMessage
+      description: Get product
+      operationId: getProduct
+      tags:
+        - product
       parameters:
         - name: id
           in: path
           required: true
           schema:
             type: string
-      tags:
-        - 'Shoe Information'
       responses:
         200:
           description: OK
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ShoeInformation'
+                $ref: '#/components/schemas/ProductInformation'
+  '/products':
+    post:
+      description: Buy product
+      operationId: buyProduct
+      tags:
+        - product
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ProductInformation"
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProductInformation'
+    get:
+      description: Get products
+      operationId: getProducts
+      tags:
+        - product
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/ProductInformation'
 
 
 components:
   schemas:
-    ShoeInformation:
+    ProductInformation:
       properties:
         id:
           type: string
-        pictureUrl:
+        name:
           type: string
-        ownerAdressing:
+        price:
           type: string
         description:
+          type: string
+        owner:
+          type: string
+        ownerAdress:
           type: string
