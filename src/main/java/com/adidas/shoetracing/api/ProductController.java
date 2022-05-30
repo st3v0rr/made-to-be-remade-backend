@@ -10,9 +10,11 @@ import java.util.List;
 import javax.servlet.ServletContext;
 import org.apache.commons.io.IOUtils;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@CrossOrigin
 public class ProductController implements ProductApi{
 
   private final ProductService productService;
