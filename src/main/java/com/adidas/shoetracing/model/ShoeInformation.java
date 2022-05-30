@@ -1,24 +1,15 @@
 package com.adidas.shoetracing.model;
 
-import java.net.URI;
-import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import org.openapitools.jackson.nullable.JsonNullable;
-import java.time.OffsetDateTime;
-import javax.validation.Valid;
-import javax.validation.constraints.*;
 import io.swagger.v3.oas.annotations.media.Schema;
-
-
-import java.util.*;
+import java.util.Objects;
 import javax.annotation.Generated;
 
 /**
  * ShoeInformation
  */
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-05-30T16:12:07.132066+02:00[Europe/Berlin]")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-05-30T17:00:08.062364+02:00[Europe/Berlin]")
 public class ShoeInformation   {
 
   @JsonProperty("id")
@@ -42,7 +33,7 @@ public class ShoeInformation   {
    * Get id
    * @return id
   */
-  
+
   @Schema(name = "id", required = false)
   public String getId() {
     return id;
@@ -61,7 +52,7 @@ public class ShoeInformation   {
    * Get pictureUrl
    * @return pictureUrl
   */
-  
+
   @Schema(name = "pictureUrl", required = false)
   public String getPictureUrl() {
     return pictureUrl;
@@ -80,7 +71,7 @@ public class ShoeInformation   {
    * Get ownerAdressing
    * @return ownerAdressing
   */
-  
+
   @Schema(name = "ownerAdressing", required = false)
   public String getOwnerAdressing() {
     return ownerAdressing;
@@ -99,7 +90,7 @@ public class ShoeInformation   {
    * Get description
    * @return description
   */
-  
+
   @Schema(name = "description", required = false)
   public String getDescription() {
     return description;
