@@ -26,7 +26,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.context.request.NativeWebRequest;
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-05-31T00:15:33.210085+02:00[Europe/Berlin]")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-05-31T00:20:54.830409+02:00[Europe/Berlin]")
 @Validated
 @Tag(name = "Product", description = "the Product API")
 public interface ProductApi {
