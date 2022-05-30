@@ -16,7 +16,7 @@ import javax.annotation.Generated;
  * Resource
  */
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-05-30T23:30:32.507993+02:00[Europe/Berlin]")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-05-31T00:15:33.210085+02:00[Europe/Berlin]")
 public class Resource   {
 
   @Override
