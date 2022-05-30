@@ -1,15 +1,24 @@
 package com.adidas.shoetracing.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.v3.oas.annotations.media.Schema;
+import java.net.URI;
 import java.util.Objects;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import org.openapitools.jackson.nullable.JsonNullable;
+import java.time.OffsetDateTime;
+import javax.validation.Valid;
+import javax.validation.constraints.*;
+import io.swagger.v3.oas.annotations.media.Schema;
+
+
+import java.util.*;
 import javax.annotation.Generated;
 
 /**
  * ProductInformation
  */
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-05-30T20:42:56.806656+02:00[Europe/Berlin]")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-05-30T22:34:31.610083+02:00[Europe/Berlin]")
 public class ProductInformation   {
 
   @JsonProperty("id")
@@ -42,7 +51,7 @@ public class ProductInformation   {
    * Get id
    * @return id
   */
-
+  
   @Schema(name = "id", required = false)
   public String getId() {
     return id;
@@ -61,7 +70,7 @@ public class ProductInformation   {
    * Get name
    * @return name
   */
-
+  
   @Schema(name = "name", required = false)
   public String getName() {
     return name;
@@ -80,7 +89,7 @@ public class ProductInformation   {
    * Get price
    * @return price
   */
-
+  
   @Schema(name = "price", required = false)
   public String getPrice() {
     return price;
@@ -99,7 +108,7 @@ public class ProductInformation   {
    * Get description
    * @return description
   */
-
+  
   @Schema(name = "description", required = false)
   public String getDescription() {
     return description;
@@ -118,7 +127,7 @@ public class ProductInformation   {
    * Get imageUrl
    * @return imageUrl
   */
-
+  
   @Schema(name = "imageUrl", required = false)
   public String getImageUrl() {
     return imageUrl;
@@ -137,7 +146,7 @@ public class ProductInformation   {
    * Get owner
    * @return owner
   */
-
+  
   @Schema(name = "owner", required = false)
   public String getOwner() {
     return owner;
@@ -156,7 +165,7 @@ public class ProductInformation   {
    * Get ownerAdress
    * @return ownerAdress
   */
-
+  
   @Schema(name = "ownerAdress", required = false)
   public String getOwnerAdress() {
     return ownerAdress;

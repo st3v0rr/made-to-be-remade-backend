@@ -29,7 +29,7 @@ import java.util.Map;
 import java.util.Optional;
 import javax.annotation.Generated;
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-05-30T20:42:56.806656+02:00[Europe/Berlin]")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-05-30T22:34:31.610083+02:00[Europe/Berlin]")
 @Validated
 @Tag(name = "Product", description = "the Product API")
 public interface ProductApi {
@@ -49,27 +49,18 @@ public interface ProductApi {
         operationId = "buyProduct",
         tags = { "product" },
         responses = {
-            @ApiResponse(responseCode = "200", description = "OK", content = @Content(mediaType = "application/json", schema = @Schema(implementation =  ProductInformation.class)))
+            @ApiResponse(responseCode = "200", description = "OK", content = @Content(mediaType = "application/json", schema = @Schema(implementation =  byte[].class)))
         }
     )
     @RequestMapping(
         method = RequestMethod.POST,
         value = "/products",
-        produces = { "application/json" },
+        produces = { "application/jpeg" },
         consumes = { "application/json" }
     )
-    default ResponseEntity<ProductInformation> buyProduct(
+    default ResponseEntity<byte[]> buyProduct(
         @Parameter(name = "ProductInformation", description = "", required = true, schema = @Schema(description = "")) @Valid @RequestBody ProductInformation productInformation
     ) {
-        getRequest().ifPresent(request -> {
-            for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
-                if (mediaType.isCompatibleWith(MediaType.valueOf("application/json"))) {
-                    String exampleString = "{ \"owner\" : \"owner\", \"price\" : \"price\", \"imageUrl\" : \"imageUrl\", \"name\" : \"name\", \"description\" : \"description\", \"ownerAdress\" : \"ownerAdress\", \"id\" : \"id\" }";
-                    ApiUtil.setExampleResponse(request, "application/json", exampleString);
-                    break;
-                }
-            }
-        });
         return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
 
     }

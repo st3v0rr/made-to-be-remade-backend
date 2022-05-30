@@ -113,6 +113,12 @@
         </dependency>
 
         <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.11.0</version>
+        </dependency>
+
+        <dependency>
             <groupId>com.google.zxing</groupId>
             <artifactId>core</artifactId>
             <version>3.3.0</version>
@@ -158,6 +164,9 @@
                                 <interfaceOnly>true</interfaceOnly>
                                 <generateSupportingFiles>false</generateSupportingFiles>
                             </configOptions>
+                            <importMappings>
+                                <importMapping>Resource=org.springframework.core.io.Resource</importMapping>
+                            </importMappings>
                         </configuration>
                     </execution>
                 </executions>

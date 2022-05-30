@@ -41,9 +41,11 @@ paths:
         200:
           description: OK
           content:
-            application/json:
+            application/jpeg:
               schema:
-                $ref: '#/components/schemas/ProductInformation'
+                type: string
+                format: byte
+
     get:
       description: Get products
       operationId: getProducts
@@ -77,3 +79,5 @@ components:
           type: string
         ownerAdress:
           type: string
+    Resource:
+      type: object
