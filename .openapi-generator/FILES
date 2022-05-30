@@ -1,0 +1,4 @@
+README.md
+src/main/java/com/adidas/shoetracing/api/ApiUtil.java
+src/main/java/com/adidas/shoetracing/api/ShoeInformationApi.java
+src/main/java/com/adidas/shoetracing/model/ShoeInformation.java

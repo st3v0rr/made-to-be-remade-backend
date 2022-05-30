@@ -1,0 +1,41 @@
+openapi: 3.0.7
+info:
+  title: Shoe Retrieval Spring
+  description: Retrieving shoe information from the blockchain
+  version: 1.0.0
+tags:
+  - name: 'Shoe Information'
+paths:
+  '/shoes/{id}':
+    get:
+      description: Retrieve message
+      operationId: retrieveMessage
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      tags:
+        - 'Shoe Information'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ShoeInformation'
+
+
+components:
+  schemas:
+    ShoeInformation:
+      properties:
+        id:
+          type: string
+        pictureUrl:
+          type: string
+        ownerAdressing:
+          type: string
+        description:
+          type: string
