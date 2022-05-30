@@ -6,12 +6,12 @@ import "./@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "./@openzeppelin/contracts/access/Ownable.sol";
 import "./@openzeppelin/contracts/utils/Counters.sol";
 
-contract TFN is ERC721, ERC721URIStorage, Ownable {
+contract APN is ERC721, ERC721URIStorage, Ownable {
     using Counters for Counters.Counter;
 
     Counters.Counter private _tokenIdCounter;
 
-    constructor() ERC721("ASN", "ASN") {}
+    constructor() ERC721("APN", "APN") {}
 
     function safeMint(address to, string memory uri) public onlyOwner {
         uint256 tokenId = _tokenIdCounter.current();
@@ -25,6 +25,11 @@ contract TFN is ERC721, ERC721URIStorage, Ownable {
     function _burn(uint256 tokenId) internal override(ERC721, ERC721URIStorage) {
         super._burn(tokenId);
     }
+
+    function _baseURI() internal view virtual override returns (string memory) {
+        return "https://ipfs.io/ipfs/";
+    }
+
 
     function tokenURI(uint256 tokenId)
     public

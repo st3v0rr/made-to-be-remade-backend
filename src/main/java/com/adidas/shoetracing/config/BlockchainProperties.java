@@ -1,6 +1,7 @@
 package com.adidas.shoetracing.config;
 
 import java.math.BigInteger;
+
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
@@ -10,49 +11,68 @@ import org.springframework.context.annotation.Configuration;
 @ConfigurationProperties(prefix = "blockchain")
 public class BlockchainProperties {
 
-  private String endpoint;
-  private String privateKey;
-  private Long chainId;
-  private BigInteger gasPrice;
-  private BigInteger gasLimit;
+    private String endpoint;
+    private String privateKey;
+    private Long chainId;
+    private BigInteger gasPrice;
+    private BigInteger gasLimit;
+    private String contractAddress;
 
-  public String getEndpoint() {
-    return endpoint;
-  }
+    private String ipfsAddress;
 
-  public void setEndpoint(String endpoint) {
-    this.endpoint = endpoint;
-  }
+    public String getEndpoint() {
+        return endpoint;
+    }
 
-  public String getPrivateKey() {
-    return privateKey;
-  }
+    public void setEndpoint(String endpoint) {
+        this.endpoint = endpoint;
+    }
 
-  public void setPrivateKey(String privateKey) {
-    this.privateKey = privateKey;
-  }
+    public String getPrivateKey() {
+        return privateKey;
+    }
 
-  public Long getChainId() {
-    return chainId;
-  }
+    public void setPrivateKey(String privateKey) {
+        this.privateKey = privateKey;
+    }
 
-  public void setChainId(Long chainId) {
-    this.chainId = chainId;
-  }
+    public Long getChainId() {
+        return chainId;
+    }
 
-  public BigInteger getGasPrice() {
-    return gasPrice;
-  }
+    public void setChainId(Long chainId) {
+        this.chainId = chainId;
+    }
 
-  public void setGasPrice(BigInteger gasPrice) {
-    this.gasPrice = gasPrice;
-  }
+    public BigInteger getGasPrice() {
+        return gasPrice;
+    }
 
-  public BigInteger getGasLimit() {
-    return gasLimit;
-  }
+    public void setGasPrice(BigInteger gasPrice) {
+        this.gasPrice = gasPrice;
+    }
 
-  public void setGasLimit(BigInteger gasLimit) {
-    this.gasLimit = gasLimit;
-  }
+    public BigInteger getGasLimit() {
+        return gasLimit;
+    }
+
+    public void setGasLimit(BigInteger gasLimit) {
+        this.gasLimit = gasLimit;
+    }
+
+    public String getContractAddress() {
+        return contractAddress;
+    }
+
+    public void setContractAddress(String contractAddress) {
+        this.contractAddress = contractAddress;
+    }
+
+    public String getIpfsAddress() {
+        return ipfsAddress;
+    }
+
+    public void setIpfsAddress(String ipfsAddress) {
+        this.ipfsAddress = ipfsAddress;
+    }
 }
