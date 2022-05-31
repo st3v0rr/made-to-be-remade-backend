@@ -1,7 +1,7 @@
 blockchain:
   endpoint: "http://127.0.0.1:7545"
-  privateKey: "0faee1ac694ee51fb60bff9ec282a3276af61010514e391c14cad812fb59a9d5"
-  chainId: 5777
+  privateKey: "6f67ebf7cc94450ac36c906be203fb35035833f7375372cadaee32299dd867e7"
+  chainId: 1337
   gasPrice: 20000000000
   gasLimit: 6721975
   contractAddress: ""

@@ -1,13 +1,22 @@
 package com.adidas.shoetracing.model;
 
+import java.net.URI;
 import java.util.Objects;
+import org.openapitools.jackson.nullable.JsonNullable;
+import java.time.OffsetDateTime;
+import javax.validation.Valid;
+import javax.validation.constraints.*;
+import io.swagger.v3.oas.annotations.media.Schema;
+
+
+import java.util.*;
 import javax.annotation.Generated;
 
 /**
  * Resource
  */
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-05-31T00:20:54.830409+02:00[Europe/Berlin]")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-05-31T09:08:06.938005+02:00[Europe/Berlin]")
 public class Resource   {
 
   @Override

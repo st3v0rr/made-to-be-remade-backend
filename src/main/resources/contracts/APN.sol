@@ -26,11 +26,6 @@ contract APN is ERC721, ERC721URIStorage, Ownable {
         super._burn(tokenId);
     }
 
-    function _baseURI() internal view virtual override returns (string memory) {
-        return "https://ipfs.io/ipfs/";
-    }
-
-
     function tokenURI(uint256 tokenId)
     public
     view

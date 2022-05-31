@@ -5,7 +5,6 @@ public class IPFSProduct {
     String name;
     String description;
     String owner;
-
     String price;
 
 
