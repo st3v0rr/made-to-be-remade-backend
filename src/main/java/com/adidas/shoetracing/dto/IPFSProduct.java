@@ -2,11 +2,19 @@ package com.adidas.shoetracing.dto;
 
 public class IPFSProduct {
 
+    String productId;
     String name;
     String description;
     String owner;
     String price;
 
+    public String getProductId() {
+        return productId;
+    }
+
+    public void setProductId(String productId) {
+        this.productId = productId;
+    }
 
     public String getPrice() {
         return price;

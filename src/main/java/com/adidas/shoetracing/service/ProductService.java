@@ -1,23 +1,19 @@
 package com.adidas.shoetracing.service;
 
+import com.adidas.shoetracing.api.ProductMock;
 import com.adidas.shoetracing.blockchain.model.APN;
 import com.adidas.shoetracing.dto.IPFSProduct;
 import com.adidas.shoetracing.model.ProductInformation;
-
+import com.fasterxml.jackson.databind.ObjectMapper;
+import io.ipfs.api.IPFS;
+import io.ipfs.api.MerkleNode;
+import io.ipfs.api.NamedStreamable;
+import io.ipfs.multihash.Multihash;
 import java.math.BigInteger;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
-import com.fasterxml.jackson.databind.ObjectMapper;
-import io.ipfs.api.MerkleNode;
-import io.ipfs.api.NamedStreamable;
-import io.ipfs.multihash.Multihash;
-import org.json.JSONObject;
-
-
-import io.ipfs.api.IPFS;
 import org.springframework.stereotype.Service;
 import org.web3j.protocol.core.methods.response.TransactionReceipt;
 import org.web3j.tx.exceptions.ContractCallException;
@@ -41,6 +37,7 @@ public class ProductService {
         //Mint product
         try {
             IPFSProduct product = new IPFSProduct();
+            product.setProductId(productInformation.getId());
             product.setName(productInformation.getName());
             product.setDescription(productInformation.getDescription());
             product.setPrice(productInformation.getPrice());
@@ -76,10 +73,15 @@ public class ProductService {
             String metadata = new String(fileContents, StandardCharsets.UTF_8);
 
             IPFSProduct product = objectMapper.readValue(metadata, IPFSProduct.class);
-            productInformation.setDescription(product.getDescription());
+            ProductInformation productInformationFromStore = ProductMock.getMockProducts()
+                .stream()
+                .filter(mockProduct -> mockProduct.getId().equals(product.getProductId()))
+                .findFirst().orElseThrow(RuntimeException::new);
+            productInformation.setId(productInformationFromStore.getId());
+            productInformation.setImageUrl(productInformationFromStore.getImageUrl());
             productInformation.setName(product.getName());
+            productInformation.setDescription(product.getDescription());
             productInformation.setPrice(product.getPrice());
-
 
             return productInformation;
         } catch (ContractCallException callException) {
