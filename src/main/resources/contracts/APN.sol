@@ -26,6 +26,11 @@ contract APN is ERC721, ERC721URIStorage, Ownable {
         super._burn(tokenId);
     }
 
+    function burn(uint256 tokenId) public virtual {
+        require(_isApprovedOrOwner(_msgSender(), tokenId), "ERC721Burnable: caller is not owner nor approved");
+        super._burn(tokenId);
+    }
+
     function tokenURI(uint256 tokenId)
     public
     view

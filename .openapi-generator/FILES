@@ -1,5 +1,7 @@
 README.md
 src/main/java/com/adidas/shoetracing/api/ApiUtil.java
 src/main/java/com/adidas/shoetracing/api/ProductApi.java
+src/main/java/com/adidas/shoetracing/api/RecycablesApi.java
 src/main/java/com/adidas/shoetracing/model/ProductInformation.java
+src/main/java/com/adidas/shoetracing/model/RecyclingRequest.java
 src/main/java/com/adidas/shoetracing/model/Resource.java

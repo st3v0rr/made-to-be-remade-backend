@@ -1,9 +1,8 @@
 blockchain:
-  endpoint: "http://127.0.0.1:7545"
-  privateKey: "0faee1ac694ee51fb60bff9ec282a3276af61010514e391c14cad812fb59a9d5"
+  endpoint: "http://localhost:7545"
+  privateKey: "b710459bc2936a169fe0c0b3ffea8d75b07c41ee09ceddd3235a8a7749aaa589"
   chainId: 1337
-  gasPrice: 20000000000
+  gasPrice: 25000000000
   gasLimit: 6721975
   contractAddress: ""
   ipfsAddress: "/ip4/127.0.0.1/tcp/5001"
-

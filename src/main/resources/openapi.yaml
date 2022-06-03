@@ -12,6 +12,12 @@ paths:
       operationId: getRecycableProducts
       tags:
         - Recycables
+      parameters:
+        - name: ownerAddress
+          in: query
+          required: true
+          schema:
+            type: string
       responses:
         200:
           description: OK
